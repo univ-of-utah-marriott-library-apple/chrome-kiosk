@@ -7,7 +7,41 @@ For more detailed information about our Mac kiosk implementation, see our blog [
 
 ## Contents
 
-[[_TOC_]]
+- [chrome-kiosk](#chrome-kiosk)
+  * [Contents](#contents)
+  * [Download](#download)
+  * [Contact](#contact)
+  * [System Requirements](#system-requirements)
+  * [Install](#install)
+  * [Uninstall](#uninstall)
+  * [History](#history)
+    + [Apple Safari, Custom Scripts & Tools](#apple-safari--custom-scripts---tools)
+    + [xStand](#xstand)
+  * [Using Google Chrome for Kiosks](#using-google-chrome-for-kiosks)
+    + [Script](#script)
+    + [Configuration](#configuration)
+    + [LaunchAgent](#launchagent)
+    + [Miscellaneous](#miscellaneous)
+      - [Metrics Reporting](#metrics-reporting)
+  * [Quick Manual Setup](#quick-manual-setup)
+    + [**Test Kiosk Mac**](#--test-kiosk-mac--)
+    + [**Download**](#--download--)
+    + [**Script**](#--script--)
+      - [Copy Script](#copy-script)
+      - [Change Owner/Group & Permissions](#change-owner-group---permissions)
+    + [**Configuration File**](#--configuration-file--)
+      - [Create Directory](#create-directory)
+      - [Change Directory Owner/Group & Permissions](#change-directory-owner-group---permissions)
+      - [Copy Configuration File](#copy-configuration-file)
+      - [Change File Owner/Group & Permissions](#change-file-owner-group---permissions)
+      - [Modify Default File Configurations](#modify-default-file-configurations)
+    + [**LaunchAgent**](#--launchagent--)
+      - [Copy LaunchAgent](#copy-launchagent)
+    + [**Test Kiosk Setup**](#--test-kiosk-setup--)
+      - [Load LaunchAgent](#load-launchagent)
+      - [Unload LaunchAgent](#unload-launchagent)
+        * [One Liner](#one-liner)
+  * [Update History](#update-history)
 
 ## Download
 Download the latest release here!
@@ -270,7 +304,7 @@ To unload the LaunchAgent enter the following command:
 
 `launchctl unload "/Users/[KIOSK USER]/Library/LaunchAgents/edu.utah.mlib.kiosk.chrome.display.plist"`
 
-Note, you might need to use ssh to unload the LaunchAgent because our methodology makes if very difficult to quit or use other applications like Finder or Termainal. To ease initial testing, you could combine the load and unload commands with a delay of X seconds using the `sleep` command.
+Note, you might need to use ssh to unload the LaunchAgent because our methodology makes if very difficult to quit or use other applications like Finder or Terminal. To ease initial testing, you could combine the load and unload commands with a delay of X seconds using the `sleep` command.
 
 + ##### One Liner
 For example:
