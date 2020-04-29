@@ -43,10 +43,10 @@ For more detailed information about our Mac kiosk implementation, see our blog [
   * [Update History](#update-history)
 
 ## Download
-Download the latest release here!
+[Download the latest release here!](../../releases/)
 
 ## Contact
-If you have any comments, questions, or other input, either file an issue or send us an [email](mailto://mlib-its-mac-github@lists.utah.edu). Thanks!
+If you have any comments, questions, or other input, either [file an issue](../../issues) or [send us an email](mailto:mlib-its-mac-github@lists.utah.edu). Thanks!
 
 ## System Requirements
 The chrome-kiosk repository has the following requirements.
