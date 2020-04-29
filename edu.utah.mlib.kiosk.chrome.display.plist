@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>POSIXSpawnType</key>
+	<string>App</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Label</key>
+	<string>edu.utah.mlib.kiosk.chrome.display</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.google.Chrome</string>
+	<key>Program</key>
+	<string>/usr/local/bin/chrome_kiosk.py</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/chrome_kiosk.log</string>
+	<key>StandardErrorPath</key>
+	<string>/tmp/chrome_kiosk.log</string>
+</dict>
+</plist>

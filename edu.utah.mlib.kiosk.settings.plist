@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>isDisplay</key>
+	<false/>
+	<key>site</key>
+	<string>https://www.apple.com</string>
+	<key>location</key>
+	<string>/Applications/Google Chrome.app</string>
+	<key>switches</key>
+	<array>
+    	<string>--force-first-run</string>
+	</array>
+	<key>wait</key>
+	<integer>5</integer>
+	<key>restart</key>
+	<integer>7200</integer>
+	<key>remove-profile</key>
+    <true/>
+</dict>
+</plist>
