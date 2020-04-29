@@ -207,7 +207,7 @@ We use the following configuration profile to disable Google Chrome's metric rep
 
 ## Quick Manual Setup
 
-### __Test Kiosk Mac__<P> We recommend setting up a test kiosk Mac system for these quick setup steps for initial configuraiton & testing before distributing into production. Login as a standard user that will mimic the production "kiosk user" for your production environment. We would also recommend having ssh access enabled on the system to make it easier to quit the Google Chrome application, as our methodology is meant to make very difficult to quit or use other applications like Finder or Terminal.
+### Test Kiosk Mac<P> We recommend setting up a test kiosk Mac system for these quick setup steps for initial configuraiton & testing before distributing into production. Login as a standard user that will mimic the production "kiosk user" for your production environment. We would also recommend having ssh access enabled on the system to make it easier to quit the Google Chrome application, as our methodology is meant to make very difficult to quit or use other applications like Finder or Terminal.
 ### **Download**<P>In the upper-right corner is a green button that says Clone or Download. Click on the button, and then in the dropdown, select Download ZIP. All of the files will begin downloading to your Mac, usually in your Downloads folder.
 ### **Script**
 + #### Copy Script<P>Next, copy or move the downloaded script named "chrome_kiosk.py" to the "/usr/local/bin" directory.<P>For example, you can use the following command to copy the script:<P>`sudo cp "/path/to/chrome-kiosk/chrome_kiosk.py" "/usr/local/bin"`
