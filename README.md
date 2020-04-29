@@ -212,44 +212,57 @@ We recommend setting up a test kiosk Mac system for these quick setup steps for 
 ### **Download**
 In the upper-right corner is a green button that says Clone or Download. Click on the button, and then in the dropdown, select Download ZIP. All of the files will begin downloading to your Mac, usually in your Downloads folder.
 ### **Script**
-+ #### Copy Script
+#### Copy Script
 Next, copy or move the downloaded script named "chrome_kiosk.py" to the "/usr/local/bin" directory.
 For example, you can use the following command to copy the script:
 
 `sudo cp "/path/to/chrome-kiosk/chrome_kiosk.py" "/usr/local/bin"`
-+ #### Change Owner/Group & Permissions
+#### Change Owner/Group & Permissions
 Next, set owner & group on the script with the following command:
+
 `sudo chown root:wheel "/usr/local/bin/chrome_kiosk.py"`
 `sudo chmod 0755 "/usr/local/bin/chrome_kiosk.py"`
 ### **Configuration File**
-+ #### Create Directory
+#### Create Directory
 Next, create a directory named "Management" in "/Library" with the following command:
+
 `sudo mkdir -p "/Library/Management"`
-+ #### Change Directory Owner/Group & Permissions
+#### Change Directory Owner/Group & Permissions
 Next, modify permssions on the newly created folder with the following commands:
+
 `sudo chown root:wheel "/Library/Management"`
 `sudo chmod 0755 "/Library/Management"`
-+ #### Copy Configuration File
+
+#### Copy Configuration File
 Next, copy or move the property list file named "edu.utah.mlib.kiosk.settings.plist" into the newly created "Management" directory with the following command:
+
 `sudo cp "/path/to/chrome-kiosk/edu.utah.mlib.kiosk.settings.plist" "/Library/Management"`
-+ #### Change File Owner/Group & Permissions
+
+#### Change File Owner/Group & Permissions
 Next, set owner & group and permissions with the following commands:
+
 `sudo chown root:wheel /Library/Management/edu.utah.mlib.kiosk.settings.plist`
 `sudo chmod 0644 "/Library/Management/edu.utah.mlib.kiosk.settings.plist"`
-+ #### Modify Default File Configurations
+
+#### Modify Default File Configurations
 Modify the property list file "edu.utah.mlib.kiosk.settings.plist" for you test kiosk system setup. Specify the path to your "Google Chrome.app" and the web page you would like to display. You can use a text editor or `defaults` command to modify property list key values.
 
 For example, you could use the following commands:
+
 `sudo defaults write "/Library/Management/edu.utah.mlib.kiosk.settings.plist" location "/Applications/Google Chrome.app"`
 `sudo defaults write "/Library/Management/edu.utah.mlib.kiosk.settings.plist" site "https://www.apple.com"`
 ### **LaunchAgent**
-+ #### Copy LaunchAgent
+#### Copy LaunchAgent
 Copy or move the LaunchAgent named "edu.utah.mlib.kiosk.chrome.display.plist" into your test kiosk users home folder with the following command:
+
 `cp "/path/to/chrome-kiosk/edu.utah.mlib.kiosk.chrome.display.plist" "/Users/[KIOSK USER]/Library/LaunchAgents"`
+
 ### **Test Kiosk Setup**
-+ #### Load LaunchAgent
+#### Load LaunchAgent
 You should be ready to test your kiosk setup. Next, enter the following command to load it:
+
 `launchctl load "/Users/[KIOSK USER]/Library/LaunchAgents/edu.utah.mlib.kiosk.chrome.display.plist"`
+
 And you should see the Google Chrome application launch and display the web page you specified with the above step.
 
 + #### Unload LaunchAgent
