@@ -95,11 +95,11 @@ The configuration file is a property list that is used to define individual kios
 
 At the minimum, you need to provide the `site` key value which is a web address like "https://www.apple.com" and `location` key value which is the path to our "Google Chrome" application distribution. In our environment, we distribute "Google Chrome" to "/Applications/Web Browsers/Google Chrome.app". You can provide additional Chromimum command line switches based on your needs to the `switch` key array values, but we primarily use the following switches in our implementation:
 
---force-first-run
+`--force-first-run`
 
 Displays the First Run experience when the browser is started, regardless of whether or not it's actually the First Run.
 
---incognito
+`--incognito`
 
 Causes the browser to launch directly in incognito mode. Incognito Mode is designed to remove any local data on the web browsing session.
 
@@ -207,7 +207,7 @@ We use the following configuration profile to disable Google Chrome's metric rep
 
 ## Quick Manual Setup
 
-### **Test Kiosk Mac** <P>We recommend setting up a test kiosk Mac system for these quick setup steps for initial configuraiton & testing before distributing into production. Login as a standard user that will mimic the production "kiosk user" for your production environment. We would also recommend having ssh access enabled on the system to make it easier to quit the Google Chrome application, as our methodology is meant to make very difficult to quit or use other applications like Finder or Terminal.
+### **Test Kiosk Mac** <P> We recommend setting up a test kiosk Mac system for these quick setup steps for initial configuraiton & testing before distributing into production. Login as a standard user that will mimic the production "kiosk user" for your production environment. We would also recommend having ssh access enabled on the system to make it easier to quit the Google Chrome application, as our methodology is meant to make very difficult to quit or use other applications like Finder or Terminal.
 ### **Download**<P>In the upper-right corner is a green button that says Clone or Download. Click on the button, and then in the dropdown, select Download ZIP. All of the files will begin downloading to your Mac, usually in your Downloads folder.
 ### **Script**
 + #### Copy Script<P>Next, copy or move the downloaded script named "chrome_kiosk.py" to the "/usr/local/bin" directory.<P>For example, you can use the following command to copy the script:<P>`sudo cp "/path/to/chrome-kiosk/chrome_kiosk.py" "/usr/local/bin"`
